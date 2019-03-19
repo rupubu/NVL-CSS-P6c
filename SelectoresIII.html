@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Práctica de selectores (III)</title>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <style media="screen">
+      .centertext {
+        text-align: center;
+      }
+      Body {
+        font: 100 30px/0.8 'Cookie', Helvetica, sans-serif;
+        color: black;
+        text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+      }
+      .titulo{
+        font-size: 200%;
+      }
+/* ENLACES */
+      a:link {
+        text-decoration: none;
+      }
+/* CELDAS */
+      .aladerecha {
+        text-align: right;
+      }
+/* IMAGENES */
+      img {
+        border-radius: 10%;
+      }
+      .cabecera {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+      }
+/* TABLAS */
+      .tableingredientes
+      {
+        width: 40%;
+        min-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .tablepasos
+      {
+        width: 40%;
+        min-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      td {
+        vertical-align: top;
+      }
+      .miniatura {
+        width: 300px;
+        height: 220px;
+      }
+/* FORMULARIO */
+      form {
+        width: 40%;
+        min-width: 500;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:10%;
+      }
+/* SELECTORES AVANZADOS */
+      [Carne] {
+        color: red;
+      }
+      [Verdura="tomate"] {
+        color: green;
+      }
+      [Verdura~="apio"] {
+        color: grey;
+      }
+      [aditivo*="i"] {
+        color: blue;
+      }
+      [aditivo^="o"] {
+        text-transform: lowercase;
+      }
+      [plato|="pro"]{ /* NO FUNCIONA COMO DEBERÍA: Lentejas y Cebolla deberían de aparecer en amarillo. */
+        color: yellow;
+      }
+/* ### */
+      }
+    </style>
+  </head>
+  <body>
+    <a name="inicio"></a>
+    <h1 class="centertext">Práctica de selectores (III)</h1>
+    <div class="center">
+      <a class="aladerecha" href="#contactar">Contactar</a> /* NO SE COLOCA A LA DERECHA NO SE PORQUE */
+      <p class="titulo centertext">Lentejas estofadas</p>
+      <img class="cabecera" src="IMG/lentejas_estofadas_con_chorizo_71176_600.jpg" alt="Plato de lentejas">
+      <table class="tableingredientes">
+        <tr>
+          <td colspan = 2>4 Comensales | 1h 30m | Dificultad baja</td>
+        </tr>
+        <tr>
+          <td colspan = 2>Ingredientes:</td>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+                <li Cantidad="400g" plato="producto">Lentejas</li>
+                <li Cantidad="250g" carne>Costilla de cerdo</li>
+                <li Cantidad="1" carne>Chorizo</li>
+                <li Cantidad="1" plato="proteina">Cebolla</li>
+                <li Cantidad="1 trozo" verdura="pimiento apio acelgas">Pimiento verde</li>
+              </ul>
+          </td>
+          <td>
+            <ul>
+              <li Cantidad="4 cucharadas soperas" verdura="tomate">Tomate frito</li>
+              <li Cantidad="1 cucharadita" aditivo="comino">Comino en polvo</li>
+              <li Cantidad="1 pizca" aditivo="sal">Sal</li>
+              <li Cantidad="1 chorro" aditivo="oliva">Aceite</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <table class="tablepasos">
+        <tr>
+          <td>Paso 1</td>
+          <td>Paso 2</td>
+          <td>Paso 3</td>
+          <td>Paso 4</td>
+        </tr>
+        <tr>
+          <td><img src="IMG/lentejas_estofadas_con_chorizo_71176_Paso_0_600.jpg" class="miniatura" alt="Plato de lentejas"></td>
+          <td><img src="IMG/lentejas_estofadas_con_chorizo_71176_Paso_1_600.jpg" class="miniatura" alt="Plato de lentejas"></td>
+          <td><img src="IMG/lentejas_estofadas_con_chorizo_71176_Paso_2_600.jpg" class="miniatura" alt="Plato de lentejas"></td>
+          <td><img src="IMG/lentejas_estofadas_con_chorizo_71176_Paso_3_600.jpg" class="miniatura" alt="Plato de lentejas"></td>
+        </tr>
+        <tr>
+          <td>Preparamos todos los ingredientes. <b>Lavamos las lentejas</b> bajo el chorro del grifo con agua fría.</td>
+          <td>Ponemos una cazuela al fuego con un buen chorro de aceite, <b>añadimos las costillas</b> en trozos pequeños y las doramos a fuego fuerte.</td>
+          <td>Una vez doradas las costillas bajamos el fuego a fuego medio. <b>Cortamos el chorizo</b> en rodajas y lo añadimos junto a las costillas. Lo rehogamos.</td>
+          <td>Añadimos a la cazuela <b>el resto de ingredientes</b> de las lentejas de la abuela: el pimiento en un trozo, la cebolla pelada y entera, la hoja de laurel y el tomate frito, y removemos.</td>
+        </tr>
+        <tr>
+          <td>Paso 5</td>
+          <td>Paso 6</td>
+          <td>Paso 7</td>
+          <td>Paso 8</td>
+        </tr>
+        <tr>
+          <td><img src="IMG/lentejas_estofadas_con_chorizo_71176_Paso_4_600.jpg" class="miniatura" alt="Plato de lentejas"></td>
+          <td><img src="IMG/lentejas_estofadas_con_chorizo_71176_Paso_5_600.jpg" class="miniatura" alt="Plato de lentejas"></td>
+          <td><img src="IMG/lentejas_estofadas_con_chorizo_71176_Paso_6_600.jpg" class="miniatura" alt="Plato de lentejas"></td>
+          <td><img src="IMG/lentejas_estofadas_con_chorizo_71176_Paso_7_600.jpg" class="miniatura" alt="Plato de lentejas"></td>
+        </tr>
+        <tr>
+          <td><b>Añadimos agua</b> y las lentejas a la olla y empezamos a cocinar las legumbres.</td>
+          <td>Añadimos <b>un poco de sal</b> y media cucharadita de comino (opcional) a la lentejas estofadas.</td>
+          <td>Dejamos cocinar hasta que las lentejas estofadas fáciles <b>estén en su punto</b>. Cuando estén las probaremos de sal y rectificamos.</td>
+          <td>Si os gustan más espesas y queréis aprovechar las verduras, triturarlas y echarlas a las <b>lentejas estofadas con chorizo</b>, que les darán mucho sabor. ¡Y listas para comer!</td>
+        </tr>
+        <tr>
+          <td class="aladerecha" colspan=4><a href="#inicio">^ Arriba</a></td>
+        </tr>
+      </table>
+      </div>
+      <a name="contactar"></a>
+      <form class="frmContacto" action="PracticaSelectoresIII.html" method="post">
+        <table>
+          <caption class="titulo">Contacta con nosotros</caption>
+          <tr>
+            <td class="aladerecha"><label for="Nombre">Nombre</label></td>
+            <td><input type "text" name="Nombre" value=""></td>
+            <td class="aladerecha"><label for="Apellidos">Apellidos</label></td>
+            <td><input type "text" name="Apellidos" value=""></td>
+          </tr>
+          <tr>
+            <td class="aladerecha"><label for="EMAIL">Correo electrónico</label></td>
+            <td colspan=3><input type="text" name="EMAIL" value=""></td>
+          </tr>
+          <tr>
+            <td class="aladerecha"><label for="COMENTARIOS">Comentarios</label></td>
+            <td colspan=4><input type="textarea" rows="4" cols="80" name="COMENTARIOS" value=""></td>
+          </tr>
+          <tr>
+            <td class="aladerecha">¿Recomendarías esta web?</td>
+            <td colspan=4>
+              <input type="radio" name="Comodidad" value="1">1
+              <input type="radio" name="Comodidad" value="2">2
+              <input type="radio" name="Comodidad" value="3">3
+              <input type="radio" name="Comodidad" value="4">4
+              <input type="radio" name="Comodidad" value="1">5
+              <input type="radio" name="Comodidad" value="2">6
+              <input type="radio" name="Comodidad" value="3">7
+              <input type="radio" name="Comodidad" value="4">8
+              <input type="radio" name="Comodidad" value="1">9
+              <input type="radio" name="Comodidad" value="2">10
+            </td>
+          </tr>
+          <tr>
+            <td colspan=4 ><input type="submit" value="Enviar" onclick="alert('Mensaje enviado.')"></td>
+          </tr>
+          <tr>
+            <td class="aladerecha" colspan=4><a href="#inicio">^ Arriba</a></td>
+          </tr>
+        </table>
+    </form>
+    <footer class="centertext">Receta e imagenes de <a href="https://www.recetasgratis.net">https://www.recetasgratis.net</a></footer>
+  </body>
+</html>
